@@ -1,5 +1,5 @@
 - Unix
 - Bash
 - Git
-HTML
-CSS
+- HTML
+- CSS
