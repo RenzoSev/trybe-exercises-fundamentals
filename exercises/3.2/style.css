@@ -1,0 +1,39 @@
+body {
+    font-size: 16px;
+    text-align: center;
+    line-height: 46px;
+    background-color: #3E3A40;
+}
+
+h1 {
+    font-size: 65px;
+    color: whitesmoke;
+    font-family: sans-serif;
+}
+
+p {
+    font-weight: 600;
+    font-size: 3em;
+    text-decoration: underline;
+}
+
+ul {
+    background-color: #96CCD9;
+}
+
+.pul {
+    background-color: #96CCD9;
+}
+
+.preto {
+    background: black;
+    color: white;
+}
+
+.branco {
+    background-color: white;
+}
+
+.cinza {
+    background-color: gray;
+}
