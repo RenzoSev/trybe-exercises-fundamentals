@@ -1,0 +1,34 @@
+h3 {
+    padding: 40px;
+}
+div:hover{
+    border-style: solid;
+    border-color: black;
+}
+div:nth-of-type(1){
+    background-color: red;
+    color: white;
+}
+div:nth-of-type(2){
+    background-color: orangered;
+    text-decoration: underline;
+}
+div:nth-of-type(3){
+    background-color: orange;
+    height: 150px;
+}
+div:nth-of-type(4){
+    background-color: green;
+}
+div:nth-of-type(5){
+    background-color: yellow;
+}
+h3:nth-of-type(1){
+    font-size: 50px;
+}
+div:nth-of-type(2n+1) h3{
+    font-style: italic;
+}
+div:nth-of-type(2n) h3{
+    font-weight: 100;
+}
