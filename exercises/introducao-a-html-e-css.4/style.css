@@ -95,3 +95,8 @@ li {
     text-align: center;
     padding: 10px 10px;
 }
+
+/* Aside */
+.aside-video {
+    float: right;
+}
