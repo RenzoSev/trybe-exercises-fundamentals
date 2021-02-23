@@ -13,6 +13,21 @@ a {
     text-decoration: none;
     color: white;
 }
+li {
+    list-style: none;
+}
+
+.container {
+    padding-top: 25px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.image-dimension {
+    max-width: 20%;
+    margin: 0 auto;
+}
 
 /* Header */
 
@@ -50,17 +65,33 @@ a {
     font-size: 2.3em;
     color: #222222;
 }
-.article-geral {
-    padding-top: 25px;
-    line-height: 1.5;
-    letter-spacing: 1px;
-    max-width: 1400px;
-    margin: 0 auto;
-}
+
 .article-geral h1 {
     font-size: 1.8em;
-    color: #22222;
+    color: #222222;
 }
 .article-geral p {
     margin-top: 8px;
+}
+
+#article-table {
+    max-width: 1400px;
+    margin: 40px auto;
+}
+
+.table-info {
+    max-width: 1400px;
+}
+.table-image {
+    max-width: 30%;
+    margin: 0 auto;
+}
+
+/* Footer */
+
+#footer-style {
+    color: white;
+    background: #3498db;
+    text-align: center;
+    padding: 10px 10px;
 }
