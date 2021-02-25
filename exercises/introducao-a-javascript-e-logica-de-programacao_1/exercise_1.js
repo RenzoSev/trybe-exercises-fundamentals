@@ -109,7 +109,7 @@ let num1 = 22
 let num2 = 21
 let num3 = 23
 
-if (num1 % 2 == 0 || num2 % 2 == 0 || num3 % 3 == 0){
+if (num1 % 2 == 0 || num2 % 2 == 0 || num3 % 3 == 0) {
     console.log('true');
 } else {
     console.log('false');
@@ -121,7 +121,7 @@ let num1 = 27
 let num2 = 21
 let num3 = 23
 
-if (num1 % 2 == 0 || num2 % 2 == 0 || num3 % 3 == 0){ //Outra forma de realizar o exerc é substituindo '==' po '!='
+if (num1 % 2 == 0 || num2 % 2 == 0 || num3 % 3 == 0) { //Outra forma de realizar o exerc é substituindo '==' po '!='
     console.log('false');
 } else {
     console.log('true');
@@ -135,6 +135,55 @@ let valorCustoTotal = valorCusto + imposto;
 let valorVenda = 200;
 let lucro = (valorVenda - valorCustoTotal);
 
-console.log (lucro)
+console.log(lucro)
 
-//
+// Uma pessoa que trabalha de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR. Faça um programa que, dado um salário bruto, calcule o líquido a ser recebido.
+
+let INSS;
+let IR;
+let salarioBase;
+let parcelaIR;
+let IRtotalValue;
+let salarioLiquido;
+let salarioBruto = 3400;
+let trybe;
+
+if (salarioBruto <= 1556.94) {
+    INSS = (salarioBruto * 8) / 100;
+} else if (salarioBruto <= 2594.92) {
+    INSS = (salarioBruto * 9) / 100;
+} else if (salarioBruto >= 2594.93 && salarioBruto <= 5189.82) {
+    INSS = (salarioBruto * 11) / 100;
+} else {
+    INSS = 570.88;
+}
+
+if (salarioBruto >= 3500) {
+    trybe = (salarioBruto * 17) / 100;
+} else {
+    trybe = 0;
+}
+
+salarioBase = salarioBruto - INSS;
+
+if (salarioBase <= 1903.98) {
+    IR = 0;
+    parcelaIR = 0
+} else if (salarioBase >= 1903.99 && salarioBase <= 2826.65) {
+    IR = 7.5;
+    parcelaIR = 142.80;
+} else if (salarioBase >= 1903.99 && salarioBase <= 2826.65) {
+    IR = 15;
+    parcelaIR = 354.80;
+} else if (salarioBase >= 1903.99 && salarioBase <= 2826.65) {
+    IR = 22.5;
+    parcelaIR = 636.13;
+} else {
+    IR = 27.5;
+    parcelaIR = 869.36;
+}
+
+IRtotalValue = ((salarioBase * IR) / 100) - parcelaIR;
+salarioLiquido = salarioBase - IRtotalValue - trybe;
+
+console.log(salarioLiquido)
