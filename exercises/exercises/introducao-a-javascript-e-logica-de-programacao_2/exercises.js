@@ -87,7 +87,7 @@ console.log(quantidadeDeImpar)
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 let menor = numbers[0];
 
-for (index = 0; index < numbers.length; index += 1) {
+for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] < menor) {
         menor = numbers[index]
     }
@@ -97,3 +97,20 @@ console.log(menor)
 
 // Oitavo exercício
 
+let array = []
+
+for (let index = 1; index < 26; index += 1) {
+    array.push(index)
+}
+
+console.log(array)
+
+// Nono exercício
+
+let array = []
+
+for (let index = 1; index < 26; index += 1) {
+    array.push(index / 2)
+}
+
+console.log(array)
