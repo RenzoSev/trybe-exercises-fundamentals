@@ -152,15 +152,15 @@ evenNumbers(13, 7, 9)
 
 // Escreva um programa que defina três números em variáveis no seu começo e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false .
 
-let num1 = 27
-let num2 = 21
-let num3 = 23
-
-if (num1 % 2 == 0 || num2 % 2 == 0 || num3 % 3 == 0) { //Outra forma de realizar o exerc é substituindo '==' po '!='
-    console.log('false');
-} else {
-    console.log('true');
+function oddNumbers(num1, num2, num3) {
+    let validation = true
+    if (num1 % 2 === 0 || num2 % 2 === 0 || num3 % 2 === 0) {
+        validation = false
+    }
+    console.log(validation)   
 }
+
+oddNumbers(21, 17, 15)
 
 // Escreva um programa que se inicie com dois valores em duas variáveis diferentes: o custo de um produto e seu valor de venda. A partir dos valores, calcule quanto de lucro (valor de venda descontado o custo do produto) a empresa terá ao vender mil desses produtos.
 
