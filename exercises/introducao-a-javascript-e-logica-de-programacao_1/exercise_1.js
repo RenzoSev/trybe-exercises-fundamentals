@@ -38,7 +38,7 @@ basicArithmetic(5, 5)
 
 // Faça um programa que retorne o maior de dois números.
 
-function higherNumber (num1, num2) {
+function higherNumber(num1, num2) {
     if (num1 > num2) {
         console.log(num1)
     } else {
@@ -50,29 +50,31 @@ higherNumber(5, 10)
 
 // Faça um programa que retorne o maior de três números.
 
-let num1 = 8
-let num2 = 10
-let num3 = 17
-
-if (num1 > num2 && num1 > num3) {
-    console.log(num1)
-} else if (num2 > num1 && num2 > num3) {
-    console.log(num2)
-} else {
-    console.log(num3)
+function higherNumberThree(num1, num2, num3) {
+    if (num1 > num2 && num1 > num3) {
+        console.log(num1)
+    } else if (num2 > num1 && num2 > num3) {
+        console.log(num2)
+    } else {
+        console.log(num3)
+    }
 }
+
+higherNumberThree(20, 10, 15)
 
 // Faça um programa que, dado um valor definido numa variável, retorne "positive" se esse valor for positivo, "negative" se for negativo e "zero" caso contrário.
 
-let num = 0
-
-if (num > 0) {
-    console.log('positive')
-} else if (num < 0) {
-    console.log('negative')
-} else {
-    console.log('zero')
+function positiveOrNegative(num1) {
+    if (num1 === 0) {
+        console.log('zero')
+    } else if (num1 > 0) {
+        console.log('positive')
+    } else {
+        console.log('negative')
+    }
 }
+
+positiveOrNegative(0)
 
 // Faça um programa que defina três variáveis com os valores dos três ângulos internos de um triângulo. Retorne true se os ângulos representarem os ângulos de um triângulo e false caso contrário.
 
