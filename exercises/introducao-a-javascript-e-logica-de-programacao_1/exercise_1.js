@@ -145,7 +145,7 @@ function evenNumbers(num1, num2, num3) {
     if (num1 % 2 === 0 || num2 % 2 === 0 || num3 % 2 === 0) {
         validation = true
     }
-    console.log(validation) 
+    console.log(validation)
 }
 
 evenNumbers(13, 7, 9)
@@ -157,20 +157,26 @@ function oddNumbers(num1, num2, num3) {
     if (num1 % 2 === 0 || num2 % 2 === 0 || num3 % 2 === 0) {
         validation = false
     }
-    console.log(validation)   
+    console.log(validation)
 }
 
 oddNumbers(21, 17, 15)
 
 // Escreva um programa que se inicie com dois valores em duas variáveis diferentes: o custo de um produto e seu valor de venda. A partir dos valores, calcule quanto de lucro (valor de venda descontado o custo do produto) a empresa terá ao vender mil desses produtos.
 
-let valorCusto = 100;
-let imposto = (valorCusto * 20) / 100;
-let valorCustoTotal = valorCusto + imposto;
-let valorVenda = 200;
-let lucro = (valorVenda - valorCustoTotal);
+function gainThousand(costValue, saleValue) {
+    let tax = (costValue * 20) / 100
+    let totalCostValue = tax + costValue
+    let sellOne = saleValue - totalCostValue
+    let sellThousand = sellOne * 1000
+    if (costValue < 0 || saleValue < 0) {
+        console.log('ERRO')
+    } else {
+        console.log(sellThousand)
+    }
+}
 
-console.log(lucro)
+gainThousand(200, 400)
 
 // Uma pessoa que trabalha de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR. Faça um programa que, dado um salário bruto, calcule o líquido a ser recebido.
 
