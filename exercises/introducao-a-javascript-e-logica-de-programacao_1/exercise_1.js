@@ -118,23 +118,25 @@ chess('Cavalo')
 
 // Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. Siga essas regras:
 
-let nota = 89
-
-if (nota >= 90 && nota <= 100) {
-    console.log('A')
-} else if (nota >= 80 && nota < 90) {
-    console.log('B')
-} else if (nota >= 70 && nota < 80) {
-    console.log('C')
-} else if (nota >= 60 && nota < 70) {
-    console.log('D')
-} else if (nota >= 50 && nota < 60) {
-    console.log('E')
-} else if (nota < 50 && nota >= 0) {
-    console.log('F')
-} else {
-    console.log('ERRO')
+function grade (gradeValue) {
+    if (gradeValue >= 90 && gradeValue <= 100) {
+        console.log('A')
+    } else if (gradeValue >= 80 && gradeValue < 90) {
+        console.log('B')
+    } else if (gradeValue >= 70 && gradeValue < 80) {
+        console.log('C')
+    } else if (gradeValue >= 60 && gradeValue < 70) {
+        console.log('D')
+    } else if (gradeValue >= 50 && gradeValue < 60) {
+        console.log('E')
+    } else if (gradeValue < 50 && gradeValue >= 0) {
+        console.log('F')
+    } else {
+        console.log('ERRO')
+    }
 }
+
+grade(90)
 
 // Escreva um programa que defina três números em variáveis no seu começo e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false .
 
