@@ -9,6 +9,7 @@ let info = {
 console.log(`Bem vinda, ${info.personagem}!`)
 
 // 2) Insira no objeto uma nova propriedade com o nome de chave "recorrente" e o valor "Sim" e, em seguida, imprima o objeto no console.
+
 info.recorrente = 'Sim'
 console.log(info)
 
@@ -34,9 +35,9 @@ let info2 = {
 };
 
 for (key in info) {
-    if (key == 'recorrente'){
+    if (key == 'recorrente') {
         console.log('Ambos recorrentes')
-    }else {
+    } else {
         console.log(`${info[key]} e ${info2[key]}`)
     }
 }
