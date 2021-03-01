@@ -180,43 +180,44 @@ gainThousand(200, 400)
 
 // Uma pessoa que trabalha de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR. Faça um programa que, dado um salário bruto, calcule o líquido a ser recebido.
 
+function netPay (grossPay) {
+
 let INSS;
 let IR;
-let salarioBase;
+let basePay;
 let parcelaIR;
 let IRtotalValue;
-let salarioLiquido;
-let salarioBruto = 3400;
+let netpay;
 let trybe;
 
-if (salarioBruto <= 1556.94) {
-    INSS = (salarioBruto * 8) / 100;
-} else if (salarioBruto <= 2594.92) {
-    INSS = (salarioBruto * 9) / 100;
-} else if (salarioBruto >= 2594.93 && salarioBruto <= 5189.82) {
-    INSS = (salarioBruto * 11) / 100;
+if (grossPay <= 1556.94) {
+    INSS = (grossPay * 8) / 100;
+} else if (grossPay <= 2594.92) {
+    INSS = (grossPay * 9) / 100;
+} else if (grossPay >= 2594.93 && grossPay <= 5189.82) {
+    INSS = (grossPay * 11) / 100;
 } else {
     INSS = 570.88;
 }
 
-if (salarioBruto >= 3500) {
-    trybe = (salarioBruto * 17) / 100;
+if (grossPay >= 3500) {
+    trybe = (grossPay * 17) / 100;
 } else {
     trybe = 0;
 }
 
-salarioBase = salarioBruto - INSS;
+basePay = grossPay - INSS;
 
-if (salarioBase <= 1903.98) {
+if (basePay <= 1903.98) {
     IR = 0;
     parcelaIR = 0
-} else if (salarioBase >= 1903.99 && salarioBase <= 2826.65) {
+} else if (basePay >= 1903.99 && basePay <= 2826.65) {
     IR = 7.5;
     parcelaIR = 142.80;
-} else if (salarioBase >= 1903.99 && salarioBase <= 2826.65) {
+} else if (basePay >= 1903.99 && basePay <= 2826.65) {
     IR = 15;
     parcelaIR = 354.80;
-} else if (salarioBase >= 1903.99 && salarioBase <= 2826.65) {
+} else if (basePay >= 1903.99 && basePay <= 2826.65) {
     IR = 22.5;
     parcelaIR = 636.13;
 } else {
@@ -224,7 +225,11 @@ if (salarioBase <= 1903.98) {
     parcelaIR = 869.36;
 }
 
-IRtotalValue = ((salarioBase * IR) / 100) - parcelaIR;
-salarioLiquido = salarioBase - IRtotalValue - trybe;
+IRtotalValue = ((basePay * IR) / 100) - parcelaIR;
+netpay = basePay - IRtotalValue - trybe;
 
-console.log(salarioLiquido)
+console.log(netpay)
+
+}
+
+netPay(3500)
