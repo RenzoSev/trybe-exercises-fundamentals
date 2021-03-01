@@ -78,13 +78,16 @@ positiveOrNegative(0)
 
 // Faça um programa que defina três variáveis com os valores dos três ângulos internos de um triângulo. Retorne true se os ângulos representarem os ângulos de um triângulo e false caso contrário.
 
-let angulo1 = 60;
-let angulo2 = 60;
-let angulo3 = 60;
+function trueAngleTriangle(angle1, angle2, angle3) {
+    let sumOfAngles = angle1 + angle2 + angle3
+    let validation = false
+    if (sumOfAngles === 180) {
+        validation = true
+    }
+    console.log(validation)
+}
 
-let somaDosAngulos = (angulo1 + angulo2 + angulo3) == 180;
-
-console.log(somaDosAngulos);
+trueAngleTriangle(60, 60, 60)
 
 // Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz.
 
