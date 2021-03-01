@@ -1,15 +1,40 @@
 // Faça cinco programas, um para cada operação aritmética básica.
+function sum(num1, num2) {
+    let sum = num1 + num2
+    return sum
+}
 
-let num1 = 10;
-let num2 = 15;
+function subtraction(num1, num2) {
+    let subtraction = num1 - num2
+    return subtraction
+}
 
-let soma = num1 + num2;
-let subtracao = num1 - num2;
-let multiplicacao = num1 * num2;
-let divisao = num1 / num2;
-let modulo = num1 % num2;
+function multiplication(num1, num2) {
+    let multiplication = num1 * num2
+    return multiplication
+}
 
-console.log(soma, subtracao, multiplicacao, divisao, modulo)
+function division(num1, num2) {
+    let division = num1 / num2
+    return division
+}
+
+function modul(num1, num2) {
+    let modul = num1 % num2
+    return modul
+}
+
+function basicArithmetic(num1, num2) {
+    let sum = num1 + num2
+    let subtraction = num1 - num2
+    let multiplication = num1 * num2
+    let division = num1 / num2
+    let modul = num1 % num2
+    console.log(sum, subtraction, multiplication, division, modul)
+}
+
+console.log(sum(5, 5), subtraction(15, 5), multiplication(2, 5), division(20, 2), modul(10, 2))
+basicArithmetic(5, 5)
 
 // Faça um programa que retorne o maior de dois números.
 
