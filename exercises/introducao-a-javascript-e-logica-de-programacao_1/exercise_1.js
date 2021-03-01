@@ -118,7 +118,7 @@ chess('Cavalo')
 
 // Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. Siga essas regras:
 
-function grade (gradeValue) {
+function grade(gradeValue) {
     if (gradeValue >= 90 && gradeValue <= 100) {
         console.log('A')
     } else if (gradeValue >= 80 && gradeValue < 90) {
@@ -140,15 +140,15 @@ grade(90)
 
 // Escreva um programa que defina três números em variáveis no seu começo e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false .
 
-let num1 = 22
-let num2 = 21
-let num3 = 23
-
-if (num1 % 2 == 0 || num2 % 2 == 0 || num3 % 3 == 0) {
-    console.log('true');
-} else {
-    console.log('false');
+function evenNumbers(num1, num2, num3) {
+    let validation = false
+    if (num1 % 2 === 0 || num2 % 2 === 0 || num3 % 2 === 0) {
+        validation = true
+    }
+    console.log(validation) 
 }
+
+evenNumbers(13, 7, 9)
 
 // Escreva um programa que defina três números em variáveis no seu começo e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false .
 
