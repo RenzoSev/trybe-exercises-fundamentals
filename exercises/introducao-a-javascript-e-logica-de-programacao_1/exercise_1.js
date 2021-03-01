@@ -91,28 +91,30 @@ trueAngleTriangle(60, 60, 60)
 
 // Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz.
 
-let peca = 'Cavalo';
-
-switch (peca.toLowerCase()) {
-    case 'peão':
-        console.log('Linha vertical')
-        break;
-    case 'bispo':
-        console.log('Diagonal')
-        break;
-    case 'torre':
-        console.log('Linha horizontal e vertical')
-        break;
-    case 'rei':
-        console.log('Linha horizontal, vertical e diagonal')
-        break;
-    case 'rainha':
-        console.log('Linha horizontal, vertical e diagonal')
-        break;
-    case 'cavalo':
-        console.log('Formato de L')
-        break;
+function chess(piece) {
+    switch (piece.toLowerCase()) {
+        case 'peão':
+            console.log('Linha vertical')
+            break;
+        case 'bispo':
+            console.log('Diagonal')
+            break;
+        case 'torre':
+            console.log('Linha horizontal e vertical')
+            break;
+        case 'rei':
+            console.log('Linha horizontal, vertical e diagonal')
+            break;
+        case 'rainha':
+            console.log('Linha horizontal, vertical e diagonal')
+            break;
+        case 'cavalo':
+            console.log('Formato de L')
+            break;
+    }
 }
+
+chess('Cavalo')
 
 // Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. Siga essas regras:
 
