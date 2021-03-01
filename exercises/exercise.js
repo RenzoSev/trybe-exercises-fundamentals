@@ -33,9 +33,10 @@ let info2 = {
     recorrente: "Sim"
 };
 
-console.log(`${info.personagem} e ${info2.personagem}`)
-console.log(`${info.origem} e ${info2.origem}`)
-console.log(`${info.nota} e ${info2.nota}`)
-if (info.recorrente === info2.recorrente) {
-    console.log('Ambos recorrentes')
+for (key in info) {
+    if (key == 'recorrente'){
+        console.log('Ambos recorrentes')
+    }else {
+        console.log(`${info[key]} e ${info2[key]}`)
+    }
 }
