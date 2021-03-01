@@ -38,14 +38,15 @@ basicArithmetic(5, 5)
 
 // Faça um programa que retorne o maior de dois números.
 
-let num1 = 5
-let num2 = 7
-
-if (num1 > num2) {
-    console.log(num1)
-} else {
-    console.log(num2)
+function higherNumber (num1, num2) {
+    if (num1 > num2) {
+        console.log(num1)
+    } else {
+        console.log(num2)
+    }
 }
+
+higherNumber(5, 10)
 
 // Faça um programa que retorne o maior de três números.
 
