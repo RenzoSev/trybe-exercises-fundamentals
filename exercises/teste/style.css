@@ -1,0 +1,158 @@
+body {
+    background-color: rgb(253, 251, 251);
+  }
+  
+  #cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgb(90, 130, 90);
+    padding: 5px;
+    border-bottom: 7px solid black;
+    z-index: 2;
+  }
+  
+  #titulo {
+    text-align: center;
+  }
+  
+  #minha_foto {
+    width: 300px;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    border-top: 7px solid black;
+    border-bottom: 7px solid black;
+    border-left: 7px solid black;
+    z-index: 1;
+  }
+  
+  .navegacao {
+    position: absolute;
+    left: 0;
+    top: 90px;
+    height: 60px;
+    width: 1028px;
+    border-left: 7px solid black;
+    border-right: 7px solid black;
+    background-color: rgb(0, 115, 120);
+  }
+  
+  .navegacao ul {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    padding-top: 8px;
+    padding-left: 310px;
+  }
+  
+  .ref_nav {
+    padding-right: 25px;
+    padding-left: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: monospace;
+    font-size: 1.3em;
+    color: white;
+  }
+  
+  .border_right {
+    border-right: 2px solid black;
+  }
+  
+  #listas {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    height: 313px;
+    width: 948px;
+    display: flex;
+    border: 7px solid black;
+    padding: 40px;
+    background-color: white;
+  }
+  
+  #licoes_aprendidas {
+    text-align: left;
+    padding-right: 150px;
+    padding-left: 80px;
+    border-right: 3px solid black;
+  }
+  
+  #licoes_a_aprender {
+    text-align: left;
+    padding-left: 120px;
+    padding-right: 100px;
+  }
+  
+  #trybe_links {
+    position: absolute;
+    top: 404px;
+    right: 0;
+    width: 307px;
+    text-align: center;
+    border-collapse: collapse;
+    border: 6px solid black;
+    background-color: white;
+  }
+  
+  #trybe_links th {
+    background-color: rgb(90, 130, 90);
+    font-size: 110%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  
+  #trybe_links tr td {
+    border-collapse: collapse;
+    border: 2px solid black;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  
+  #trybe_links tr td:hover {
+    background-color: rgba(90, 130, 90, 0.7);
+    font-size: 120%;
+    text-decoration: underline;
+  }
+  
+  .course_url {
+    text-decoration: none;
+    color: black;
+  }
+  
+  #main {
+    position: absolute;
+    padding: 50px;
+    padding-bottom: 100px;
+    top: 550px;
+    margin: 5px;
+  }
+  
+  .main_text {
+    line-height: 1.3em;
+  }
+  
+  #rodape {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(90, 130, 90, 0.7);
+    padding-bottom: 5px;
+    border-top: 2px solid black;
+  }
+  
+  #rodape p {
+    text-align: right;
+    padding-right: 10px;
+  }
+  
+  #link {
+    color: black;
+  }
