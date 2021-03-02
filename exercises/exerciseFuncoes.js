@@ -98,9 +98,9 @@ checkHighestRepetitionNumber(numbers)
 
 // 6) Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
 
-function gaussSum (number) {
-    let sumResult = number
-    
+function gaussSum(number) {
+    let sumResult = number;
+
     for (let index = number - 1; index > 0; index -= 1) {
         sumResult += index
     }
@@ -109,3 +109,25 @@ function gaussSum (number) {
 }
 
 gaussSum(5)
+
+// 7) Crie uma função que receba uma string word e outra string ending . Verifique se a string ending é o final da string word . Considere que a string ending sempre será menor que a string word.
+
+function checkStringEnding(stringWord, stringEnding) {
+    let stringWordToLowercase = stringWord.toLowerCase();
+    let stringEndingToLowercase = stringEnding.toLowerCase();
+    let stringWordArray = Array.from(stringWordToLowercase);
+    let stringWordArrayReverse = stringWordArray.reverse();
+    let stringEndingArray = Array.from(stringEndingToLowercase);
+    let stringEndingArrayReverse = stringEndingArray.reverse();
+    let checker = true;
+
+    for (index = 0; index < stringEndingArray.length; index += 1) {
+        if (stringEndingArrayReverse[index] != stringWordArrayReverse[index]) {
+            checker = false
+        }
+    }
+
+    console.log(checker)
+}
+
+checkStringEnding('Renzo', 'En')
