@@ -24,7 +24,7 @@ checkPalindromes('Garrafa')
 
 let numbers = [2, 3, 4, 12, 8, 5, 10, 16]
 
-function higherInteger (array) {
+function highestInteger (array) {
     let higher = array[0]
     for (index = 0; index < array.length; index += 1){
         if (array[index + 1] > higher) {
@@ -34,6 +34,22 @@ function higherInteger (array) {
     console.log(higher)
 }
 
-higherInteger(numbers)
+highestInteger(numbers)
+
+// 3) Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
+
+let numbers = [2, 3, 4, 12, 8, 5, 10, 16, -1]
+
+function smallestInteger (array) {
+    let smaller = array[0]
+    for (index = 0; index < array.length; index += 1){
+        if (array[index + 1] < smaller) {
+            smaller = array[index + 1]
+        }
+    }
+    console.log(smaller)
+}
+
+smallestInteger(numbers)
 
 //
