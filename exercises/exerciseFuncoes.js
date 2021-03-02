@@ -68,4 +68,32 @@ function checkHighestString(array) {
 
 checkHighestString(names)
 
-//
+// 5) Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+
+let numbers = [2, 3, 2, 5, 8, 2, 3];
+
+function checkHighestRepetitionNumber(array) {
+    let mostRepeatedNumber = 0;
+    let currentNumber = -1;
+    let number = 0;
+
+    for (index = 0; index < array.length; index += 1) {
+        for (indexVerificator = 0; indexVerificator < array.length; indexVerificator += 1) {
+            if (numbers[index] === numbers[indexVerificator]) {
+                currentNumber += 1
+            }
+        }
+
+        if (currentNumber > mostRepeatedNumber) {
+            number = array[index]
+            mostRepeatedNumber = currentNumber
+        }
+
+        currentNumber = 0
+    }
+    console.log(number)
+}
+
+checkHighestRepetitionNumber(numbers)
+
+// 
