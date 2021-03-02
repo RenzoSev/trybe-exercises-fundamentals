@@ -96,4 +96,16 @@ function checkHighestRepetitionNumber(array) {
 
 checkHighestRepetitionNumber(numbers)
 
-// 
+// 6) Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
+
+function gaussSum (number) {
+    let sumResult = number
+    
+    for (let index = number - 1; index > 0; index -= 1) {
+        sumResult += index
+    }
+
+    console.log(sumResult)
+}
+
+gaussSum(5)
