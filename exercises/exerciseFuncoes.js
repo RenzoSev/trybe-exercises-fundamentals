@@ -20,4 +20,20 @@ function checkPalindromes(word) {
 checkPalindromes('Ovo')
 checkPalindromes('Garrafa')
 
+// 2) Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
+
+let numbers = [2, 3, 4, 12, 8, 5, 10, 16]
+
+function higherInteger (array) {
+    let higher = array[0]
+    for (index = 0; index < array.length; index += 1){
+        if (array[index + 1] > higher) {
+            higher = array[index + 1]
+        }
+    }
+    console.log(higher)
+}
+
+higherInteger(numbers)
+
 //
