@@ -42,16 +42,9 @@
         </div>
     </div>
     <script>
-        /*
-        FEITO: Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
-        FEITO: Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
-        FEITO: Crie uma função que mude a cor do quadrado vermelho para branco.
-        FEITO: Crie uma função que corrija o texto da tag <h1>.
-        FEITO: Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
-        Crie uma função que exiba o conteúdo de todas as tags <p> no console.
-        */
-        function changeParagraph (paragraph) {
-            paragraph.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam autem nulla laborum libero ipsam aut inventore. Voluptate voluptatum sit temporibus ipsam optio? Laborum in aliquam aspernatur voluptas dolore beatae et.';
+        function changeParagraph(paragraph) {
+            paragraph.innerText =
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam autem nulla laborum libero ipsam aut inventore. Voluptate voluptatum sit temporibus ipsam optio? Laborum in aliquam aspernatur voluptas dolore beatae et.';
         }
 
         changeParagraph(document.getElementsByTagName('p')[0]);
@@ -80,7 +73,14 @@
         }
 
         changeParagraphToUpperCase(document.getElementsByTagName('p')[0]);
-        
+
+        function showParagraphsConsole(paragraphs) {
+            for (let index in paragraphs) {
+                console.log(paragraphs[index]);
+            }
+        }
+
+        showParagraphsConsole(document.getElementsByTagName('p'));
     </script>
 </body>
 
