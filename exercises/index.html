@@ -47,7 +47,7 @@
         FEITO: Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
         FEITO: Crie uma função que mude a cor do quadrado vermelho para branco.
         FEITO: Crie uma função que corrija o texto da tag <h1>.
-        Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+        FEITO: Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
         Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
         function changeParagraph (paragraph) {
@@ -73,6 +73,13 @@
         }
 
         corretTheHeader(document.getElementsByClassName('title')[0]);
+
+        function changeParagraphToUpperCase(paragraph) {
+            let upperParagraph = paragraph.innerText.toUpperCase();
+            paragraph.innerText = upperParagraph;
+        }
+
+        changeParagraphToUpperCase(document.getElementsByTagName('p')[0]);
         
     </script>
 </body>
