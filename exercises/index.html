@@ -1,87 +1,63 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Exercício 5.1</title>
-
+    <title>Exercício 5.2</title>
     <style>
-        div {
-            border-color: black;
-            border-style: solid;
-        }
+      div {
+        border-color: black;
+        border-style: solid;
+      }
 
-        .title {
-            text-align: center;
-        }
+      .title {
+        text-align: center;
+      }
 
-        .main-content {
-            background-color: yellow;
-        }
+      .main-content {
+        background-color: yellow;
+      }
 
-        .main-content .center-content {
-            background-color: red;
-            width: 50%;
-            margin: 0 auto;
-        }
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-        .main-content .center-content p {
-            font-style: italic;
-        }
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
     </style>
-</head>
-
-<body>
-    <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
-    <div class="main-content">
-        <div class="center-content">
-            <p>Texto padrão do nosso site</p>
-            <p>-----</p>
-            <p>Trybe</p>
-        </div>
-    </div>
+  </head>
+  <body>
     <script>
-        function changeParagraph(paragraph) {
-            paragraph.innerText =
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam autem nulla laborum libero ipsam aut inventore. Voluptate voluptatum sit temporibus ipsam optio? Laborum in aliquam aspernatur voluptas dolore beatae et.';
-        }
-
-        changeParagraph(document.getElementsByTagName('p')[0]);
-
-        function changeBackgroundToTrybeColor(element) {
-            element.style.background = 'rgb(76,164,109)';
-        }
-
-        changeBackgroundToTrybeColor(document.getElementsByClassName('main-content')[0]);
-
-        function changeBackgroundToWhiteColor(element) {
-            element.style.background = 'white';
-        }
-
-        changeBackgroundToWhiteColor(document.getElementsByClassName('center-content')[0]);
-
-        function corretTheHeader(header) {
-            header.innerText = 'Exercício 5.1 - JavaScript'
-        }
-
-        corretTheHeader(document.getElementsByClassName('title')[0]);
-
-        function changeParagraphToUpperCase(paragraph) {
-            let upperParagraph = paragraph.innerText.toUpperCase();
-            paragraph.innerText = upperParagraph;
-        }
-
-        changeParagraphToUpperCase(document.getElementsByTagName('p')[0]);
-
-        function showParagraphsConsole(paragraphs) {
-            for (let index in paragraphs) {
-                console.log(paragraphs[index]);
-            }
-        }
-
-        showParagraphsConsole(document.getElementsByTagName('p'));
+      // COLOQUE SEU CÓDIGO AQUI
     </script>
-</body>
-
+  </body>
 </html>
