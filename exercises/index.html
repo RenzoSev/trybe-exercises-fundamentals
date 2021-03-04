@@ -57,8 +57,23 @@
   </head>
   <body>
     <script>
-      const headerOne = document.createElement('h1');
-      document.body.appendChild(headerOne);
+      let headerOne = document.createElement('h1');
+      let divMainContent = document.createElement('div');
+      let divCenterContent = document.createElement('div');
+      
+      divMainContent.className = "main-content";
+      divCenterContent.className = "center-content"
+
+      function appendToBody (element) {
+          document.body.appendChild(element)
+      }
+      function appendChild (parent, child) {
+          parent.appendChild(child);
+      }
+      appendToBody(headerOne);
+      appendToBody(divMainContent);
+      appendChild(divMainContent, divCenterContent)
+      
     </script>
   </body>
 </html>
