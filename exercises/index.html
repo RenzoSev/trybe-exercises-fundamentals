@@ -57,12 +57,20 @@
   </head>
   <body>
     <script>
+      
       let headerOne = document.createElement('h1');
       let divMainContent = document.createElement('div');
       let divCenterContent = document.createElement('div');
+      let divLeftContent = document.createElement('div');
+      let divRightContent = document.createElement('div');
+      let paragraphCenterContent = document.createElement('p');
+      let imageLeftContent = document.createElement('img');
       
       divMainContent.className = "main-content";
-      divCenterContent.className = "center-content"
+      divCenterContent.className = "center-content";
+      divLeftContent.className = "left-content";
+      divRightContent.className = "right-content";
+      imageLeftContent.src = "https://picsum.photos/200";
 
       function appendToBody (element) {
           document.body.appendChild(element)
@@ -70,9 +78,16 @@
       function appendChild (parent, child) {
           parent.appendChild(child);
       }
+      
       appendToBody(headerOne);
       appendToBody(divMainContent);
-      appendChild(divMainContent, divCenterContent)
+      appendChild(divMainContent, divCenterContent);
+      appendChild(divCenterContent, paragraphCenterContent);
+      appendChild(divMainContent, divLeftContent);
+      appendChild(divMainContent, divRightContent);
+      appendChild(divLeftContent, imageLeftContent);
+
+      paragraphCenterContent.innerText = 'Trybe'
       
     </script>
   </body>
