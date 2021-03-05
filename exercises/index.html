@@ -2,144 +2,45 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Exercício 5.2</title>
-    <style>
-        div {
-            border-color: black;
-            border-style: solid;
-        }
-
-        .title {
-            text-align: center;
-        }
-
-        .main-content {
-            background-color: yellow;
-        }
-
-        .main-content .center-content {
-            background-color: red;
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .main-content .center-content p {
-            font-style: italic;
-        }
-
-        .main-content .left-content {
-            background-color: green;
-            width: 60%;
-            margin-left: 0;
-            margin-right: auto;
-        }
-
-        .main-content .left-content .small-image {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            border-radius: 100%;
-        }
-
-        .main-content .right-content {
-            background-color: blue;
-            width: 60%;
-            margin-left: auto;
-            margin-right: 0;
-        }
-
-        .main-content .description {
-            text-align: center;
-        }
-    </style>
+    <title>Calendar</title>
 </head>
 
 <body>
-    <script>
-        function generateAppendChildToBody(element) {
-            document.body.appendChild(element)
-        }
-
-        function generateAppendChild(parent, childElement) {
-            parent.appendChild(childElement);
-        }
-
-        function generateRemoveChild(parent, childElement) {
-            parent.removeChild(childElement);
-        }
-
-        function createList(array, parentList) {
-            for (let index = 0; index < array.length; index += 1) {
-                let elementList = document.createElement('li');
-                let textList = array[index];
-                elementList.innerText = textList;
-                parentList.appendChild(elementList);
-            }
-            return (parentList)
-        }
-
-        function timesToGenerateAppendChild(timeRepetions, parent, childElement) {
-            for (let index = 0; index < timeRepetions; index += 1){
-                let elementTag = document.createElement(childElement);
-                parent.appendChild(elementTag)
-            }
-        }
-
-        function createAnElement(stringTagElement) {
-            return document.createElement(stringTagElement);
-        }
-
-        function createClassName(element, elementClassName) {
-            element.className = elementClassName;
-        }
-
-        let headerOne = createAnElement('h1');
-        generateAppendChildToBody(headerOne);
-        createClassName(headerOne, "title");
-
-        let divMainContent = createAnElement('div');
-        generateAppendChildToBody(divMainContent);
-        createClassName(divMainContent, "main-content");
-        divMainContent.style.background = "green"; 
-
-        let divCenterContent = createAnElement('div');
-        generateAppendChild(divMainContent, divCenterContent);
-        createClassName(divCenterContent, "center-content");
-
-        let divLeftContent = createAnElement('div');
-        generateAppendChild(divMainContent, divLeftContent);
-        createClassName(divLeftContent, "left-content")
-
-        let divRightContent = createAnElement('div');
-        divRightContent.className = "right-content";
-        generateAppendChild(divMainContent, divRightContent);
-        divRightContent.style.marginRight = "auto";
-
-        let paragraphCenterContent = createAnElement('p');
-        generateAppendChild(divCenterContent, paragraphCenterContent);
-        paragraphCenterContent.innerText = 'Trybe'
-
-        let imageLeftContent = createAnElement('img');
-        generateAppendChild(divLeftContent, imageLeftContent);
-        imageLeftContent.src = "https://picsum.photos/200";
-
-        let ulRightContent = document.createElement('ul')
-        createList(['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito','Nove', 'Dez'], ulRightContent)
-        generateAppendChild(divRightContent, ulRightContent);
-        generateRemoveChild(ulRightContent, document.querySelectorAll('ul li')[8]);
-        generateRemoveChild(ulRightContent, document.querySelectorAll('ul li')[8]);
-    
-        timesToGenerateAppendChild(3, divMainContent, 'h3');
-        let headersThree = document.querySelectorAll('.main-content h3');
-        for (let index of headersThree) {
-            index.className = "description"
-        }
-    
-        generateRemoveChild(divMainContent, divLeftContent);
-    </script>
+    <header class="month-container">
+        <ul>
+            <li id="month">Dezembro</li>
+            <li id="year">2020</li>
+        </ul>
+    </header>
+    <div class="week-days-container">
+        <ul class="week-days">
+        </ul>
+    </div>
+    <div class="days-container">
+        <ul id="days">
+        </ul>
+    </div>
+    <div class="buttons-container">
+    </div>
+    <section class="tasks-container">
+        <div class="my-tasks">
+            <h3>MINHAS TAREFAS</h3>
+        </div>
+        <div class="input-container">
+            <h3>COMPROMISSOS</h3>
+            <label for="task-input">Novo:</label>
+            <input type="text" id="task-input" placeholder="Escreva seu compromisso">
+            <button id="btn-add">Adicionar</button>
+        </div>
+        <div class="task-list-container">
+            <ul class="task-list">
+            </ul>
+        </div>
+    </section>
+    <script src="script.js"></script>
 </body>
 
 </html>
