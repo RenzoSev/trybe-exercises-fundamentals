@@ -14,7 +14,10 @@ function createDaysOfTheWeek() {
 createDaysOfTheWeek();
 
 // Escreva seu código abaixo.
+
 const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+const buttonFeriado = createBtn('Feriado');
+buttonFeriado.id = 'btn-holiday';
 
 function createLisDezDays(array) {
     const ulDays = document.getElementById('days');
@@ -49,4 +52,14 @@ function verifyFriday(day, fridays, listDay) {
         }
     }
 }
+
+function createBtn(btnName) {
+    const theBtn = document.createElement('button');
+    theBtn.innerText = btnName;
+    return theBtn;
+}
+
 createLisDezDays(dezDaysList);
+document.querySelector('.buttons-container').appendChild(buttonFeriado);
+
+
