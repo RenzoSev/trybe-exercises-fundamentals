@@ -67,6 +67,10 @@
             parent.appendChild(childElement);
         }
 
+        function generateRemoveChild(parent, childElement) {
+            parent.removeChild(childElement);
+        }
+
         function createList(array) {
             let elementUlist = document.createElement('ul');
             for (let index = 0; index < array.length; index += 1) {
@@ -95,6 +99,7 @@
 
         let headerOne = createAnElement('h1');
         generateAppendChildToBody(headerOne);
+        createClassName(headerOne, "title");
 
         let divMainContent = createAnElement('div');
         generateAppendChildToBody(divMainContent);
@@ -125,7 +130,12 @@
         generateAppendChild(divRightContent, createList(['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito','Nove', 'Dez']));
     
         timesToGenerateAppendChild(3, divMainContent, 'h3');
+        let headersThree = document.querySelectorAll('.main-content h3');
+        for (let index of headersThree) {
+            index.className = "description"
+        }
     
+        generateRemoveChild(divMainContent, divLeftContent);
     </script>
 </body>
 
