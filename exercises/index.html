@@ -71,15 +71,14 @@
             parent.removeChild(childElement);
         }
 
-        function createList(array) {
-            let elementUlist = document.createElement('ul');
+        function createList(array, parentList) {
             for (let index = 0; index < array.length; index += 1) {
                 let elementList = document.createElement('li');
                 let textList = array[index];
                 elementList.innerText = textList;
-                elementUlist.appendChild(elementList);
+                parentList.appendChild(elementList);
             }
-            return (elementUlist)
+            return (parentList)
         }
 
         function timesToGenerateAppendChild(timeRepetions, parent, childElement) {
@@ -103,7 +102,8 @@
 
         let divMainContent = createAnElement('div');
         generateAppendChildToBody(divMainContent);
-        createClassName(divMainContent, "main-content")
+        createClassName(divMainContent, "main-content");
+        divMainContent.style.background = "green"; 
 
         let divCenterContent = createAnElement('div');
         generateAppendChild(divMainContent, divCenterContent);
@@ -116,6 +116,7 @@
         let divRightContent = createAnElement('div');
         divRightContent.className = "right-content";
         generateAppendChild(divMainContent, divRightContent);
+        divRightContent.style.marginRight = "auto";
 
         let paragraphCenterContent = createAnElement('p');
         generateAppendChild(divCenterContent, paragraphCenterContent);
@@ -126,8 +127,10 @@
         imageLeftContent.src = "https://picsum.photos/200";
 
         let ulRightContent = document.createElement('ul')
+        createList(['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito','Nove', 'Dez'], ulRightContent)
         generateAppendChild(divRightContent, ulRightContent);
-        generateAppendChild(divRightContent, createList(['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito','Nove', 'Dez']));
+        generateRemoveChild(ulRightContent, document.querySelectorAll('ul li')[8]);
+        generateRemoveChild(ulRightContent, document.querySelectorAll('ul li')[8]);
     
         timesToGenerateAppendChild(3, divMainContent, 'h3');
         let headersThree = document.querySelectorAll('.main-content h3');
