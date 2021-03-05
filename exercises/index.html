@@ -1,94 +1,122 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Exercício 5.2</title>
     <style>
-      div {
-        border-color: black;
-        border-style: solid;
-      }
+        div {
+            border-color: black;
+            border-style: solid;
+        }
 
-      .title {
-        text-align: center;
-      }
+        .title {
+            text-align: center;
+        }
 
-      .main-content {
-        background-color: yellow;
-      }
+        .main-content {
+            background-color: yellow;
+        }
 
-      .main-content .center-content {
-        background-color: red;
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-      }
+        .main-content .center-content {
+            background-color: red;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-      .main-content .center-content p {
-        font-style: italic;
-      }
+        .main-content .center-content p {
+            font-style: italic;
+        }
 
-      .main-content .left-content {
-        background-color: green;
-        width: 60%;
-        margin-left: 0;
-        margin-right: auto;
-      }
+        .main-content .left-content {
+            background-color: green;
+            width: 60%;
+            margin-left: 0;
+            margin-right: auto;
+        }
 
-      .main-content .left-content .small-image {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 100%;
-      }
+        .main-content .left-content .small-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 100%;
+        }
 
-      .main-content .right-content {
-        background-color: blue;
-        width: 60%;
-        margin-left: auto;
-        margin-right: 0;
-      }
+        .main-content .right-content {
+            background-color: blue;
+            width: 60%;
+            margin-left: auto;
+            margin-right: 0;
+        }
 
-      .main-content .description {
-        text-align: center;
-      }
+        .main-content .description {
+            text-align: center;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <script>
-      
-      let headerOne = document.createElement('h1');
-      let divMainContent = document.createElement('div');
-      let divCenterContent = document.createElement('div');
-      let divLeftContent = document.createElement('div');
-      let divRightContent = document.createElement('div');
-      let paragraphCenterContent = document.createElement('p');
-      let imageLeftContent = document.createElement('img');
-      
-      divMainContent.className = "main-content";
-      divCenterContent.className = "center-content";
-      divLeftContent.className = "left-content";
-      divRightContent.className = "right-content";
-      imageLeftContent.src = "https://picsum.photos/200";
+        function appendToBody(element) {
+            document.body.appendChild(element)
+        }
 
-      function appendToBody (element) {
-          document.body.appendChild(element)
-      }
-      function appendChild (parent, child) {
-          parent.appendChild(child);
-      }
-      
-      appendToBody(headerOne);
-      appendToBody(divMainContent);
-      appendChild(divMainContent, divCenterContent);
-      appendChild(divCenterContent, paragraphCenterContent);
-      appendChild(divMainContent, divLeftContent);
-      appendChild(divMainContent, divRightContent);
-      appendChild(divLeftContent, imageLeftContent);
+        function appendChild(parent, child) {
+            parent.appendChild(child);
+        }
 
-      paragraphCenterContent.innerText = 'Trybe'
-      
+        function createList(array) {
+            let elementUlist = document.createElement('ul');
+            for (let index = 0; index < array.length; index += 1) {
+                let elementList = document.createElement('li');
+                let textList = array[index];
+                elementList.innerText = textList;
+                elementUlist.appendChild(elementList);
+            }
+            return (elementUlist)
+        }
+
+        function createAnElement(stringTagElement) {
+            return document.createElement(stringTagElement);
+        }
+
+        function createClassName(element, elementClassName) {
+            element.className = elementClassName;
+        }
+
+        let headerOne = createAnElement('h1');
+        appendToBody(headerOne);
+
+        let divMainContent = createAnElement('div');
+        appendToBody(divMainContent);
+        createClassName(divMainContent, "main-content")
+
+        let divCenterContent = createAnElement('div');
+        appendChild(divMainContent, divCenterContent);
+        createClassName(divCenterContent, "center-content");
+
+        let divLeftContent = createAnElement('div');
+        appendChild(divMainContent, divLeftContent);
+        createClassName(divLeftContent, "left-content")
+
+        let divRightContent = createAnElement('div');
+        divRightContent.className = "right-content";
+        appendChild(divMainContent, divRightContent);
+
+        let paragraphCenterContent = createAnElement('p');
+        appendChild(divCenterContent, paragraphCenterContent);
+        paragraphCenterContent.innerText = 'Trybe'
+
+        let imageLeftContent = createAnElement('img');
+        appendChild(divLeftContent, imageLeftContent);
+        imageLeftContent.src = "https://picsum.photos/200";
+
+        let ulRightContent = document.createElement('ul')
+        appendChild(divRightContent, ulRightContent);
+        appendChild(divRightContent, createList(['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito','Nove', 'Dez']));
     </script>
-  </body>
+</body>
+
 </html>
