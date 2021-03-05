@@ -59,12 +59,12 @@
 
 <body>
     <script>
-        function appendToBody(element) {
+        function generateAppendChildToBody(element) {
             document.body.appendChild(element)
         }
 
-        function appendChild(parent, child) {
-            parent.appendChild(child);
+        function generateAppendChild(parent, childElement) {
+            parent.appendChild(childElement);
         }
 
         function createList(array) {
@@ -78,6 +78,13 @@
             return (elementUlist)
         }
 
+        function timesToGenerateAppendChild(timeRepetions, parent, childElement) {
+            for (let index = 0; index < timeRepetions; index += 1){
+                let elementTag = document.createElement(childElement);
+                parent.appendChild(elementTag)
+            }
+        }
+
         function createAnElement(stringTagElement) {
             return document.createElement(stringTagElement);
         }
@@ -87,35 +94,38 @@
         }
 
         let headerOne = createAnElement('h1');
-        appendToBody(headerOne);
+        generateAppendChildToBody(headerOne);
 
         let divMainContent = createAnElement('div');
-        appendToBody(divMainContent);
+        generateAppendChildToBody(divMainContent);
         createClassName(divMainContent, "main-content")
 
         let divCenterContent = createAnElement('div');
-        appendChild(divMainContent, divCenterContent);
+        generateAppendChild(divMainContent, divCenterContent);
         createClassName(divCenterContent, "center-content");
 
         let divLeftContent = createAnElement('div');
-        appendChild(divMainContent, divLeftContent);
+        generateAppendChild(divMainContent, divLeftContent);
         createClassName(divLeftContent, "left-content")
 
         let divRightContent = createAnElement('div');
         divRightContent.className = "right-content";
-        appendChild(divMainContent, divRightContent);
+        generateAppendChild(divMainContent, divRightContent);
 
         let paragraphCenterContent = createAnElement('p');
-        appendChild(divCenterContent, paragraphCenterContent);
+        generateAppendChild(divCenterContent, paragraphCenterContent);
         paragraphCenterContent.innerText = 'Trybe'
 
         let imageLeftContent = createAnElement('img');
-        appendChild(divLeftContent, imageLeftContent);
+        generateAppendChild(divLeftContent, imageLeftContent);
         imageLeftContent.src = "https://picsum.photos/200";
 
         let ulRightContent = document.createElement('ul')
-        appendChild(divRightContent, ulRightContent);
-        appendChild(divRightContent, createList(['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito','Nove', 'Dez']));
+        generateAppendChild(divRightContent, ulRightContent);
+        generateAppendChild(divRightContent, createList(['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito','Nove', 'Dez']));
+    
+        timesToGenerateAppendChild(3, divMainContent, 'h3');
+    
     </script>
 </body>
 
