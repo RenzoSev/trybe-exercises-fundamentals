@@ -16,8 +16,9 @@ createDaysOfTheWeek();
 // Escreva seu código abaixo.
 
 const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-const buttonFeriado = createBtn('Feriado');
-buttonFeriado.id = 'btn-holiday';
+const buttonHoliday = createBtn('Feriado');
+const buttonFriday = createBtn('Friday');
+buttonHoliday.id = 'btn-holiday';
 
 function createLisDezDays(array) {
     const ulDays = document.getElementById('days');
@@ -62,9 +63,11 @@ function createBtn(btnName) {
 
 
 createLisDezDays(dezDaysList);
-document.querySelector('.buttons-container').appendChild(buttonFeriado);
 
-buttonFeriado.addEventListener('click', function changeColorHoliday() {
+document.querySelector('.buttons-container').appendChild(buttonHoliday);
+document.querySelector('.buttons-container').appendChild(buttonFriday);
+
+buttonHoliday.addEventListener('click', function changeColorHoliday() {
     const holidayDays = document.getElementsByClassName('holiday');
     for (let index of holidayDays) {
         if (index.style.color === ''){
