@@ -47,7 +47,7 @@ function verifyHoliday(day, holidays, listDay) {
 
 function verifyFriday(day, fridays, listDay) {
     for (let index of fridays) {
-        if( day === index) {
+        if (day === index) {
             listDay.className += ' friday'
         }
     }
@@ -59,7 +59,19 @@ function createBtn(btnName) {
     return theBtn;
 }
 
+
+
 createLisDezDays(dezDaysList);
 document.querySelector('.buttons-container').appendChild(buttonFeriado);
 
-
+buttonFeriado.addEventListener('click', function changeColorHoliday() {
+    const holidayDays = document.getElementsByClassName('holiday');
+    for (let index of holidayDays) {
+        if (index.style.color === ''){
+            index.style.color = 'rgb(152,255,152)'
+            console.log(index)
+        } else {
+            index.style.color = '';
+        }
+    }
+})
