@@ -36,6 +36,7 @@
     vertical-align: middle;
     width: 13.6%;
     cursor: pointer;
+    transition: all 0.3s;
   }
   
   .input-container {

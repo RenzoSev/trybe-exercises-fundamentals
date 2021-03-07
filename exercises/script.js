@@ -20,6 +20,7 @@ const holidaysList = [24, 25, 31];
 const fridaysList = [4, 11, 15, 18];
 const buttonHoliday = createBtn('Feriado');
 const buttonFriday = createBtn('Friday');
+const cozinharTask = createTask('cozinhar');
 buttonHoliday.id = 'btn-holiday';
 buttonFriday.id = 'btn-friday';
 
@@ -61,6 +62,12 @@ function createBtn(btnName) {
     const theBtn = document.createElement('button');
     theBtn.innerText = btnName;
     return theBtn;
+}
+
+function createTask (taskName) {
+    let theTask = document.createElement('span');
+    theTask.innerText = taskName;
+    return theTask;
 }
 
 
@@ -105,3 +112,5 @@ document.querySelectorAll('.day').forEach(function(element){
         element.target.style.color = '#777';
     })
 })
+
+document.querySelector('.my-tasks').appendChild(cozinharTask);
