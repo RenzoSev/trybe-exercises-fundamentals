@@ -118,3 +118,10 @@ document.querySelectorAll('.my-tasks div').forEach(function (element) {
          else element.target.className += ' selected';
     })
 })
+
+document.querySelectorAll('.day').forEach(function(element){
+    element.addEventListener('click', function(element){
+        if(element.target.style.background === '') element.target.style.background = document.querySelector('.selected').style.backgroundColor
+         else element.target.style.background = '';    
+    })
+})
