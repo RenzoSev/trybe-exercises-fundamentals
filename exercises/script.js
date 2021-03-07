@@ -21,6 +21,7 @@ const fridaysList = [4, 11, 15, 18];
 const buttonHoliday = createBtn('Feriado');
 const buttonFriday = createBtn('Friday');
 buttonHoliday.id = 'btn-holiday';
+buttonFriday.id = 'btn-friday';
 
 function createLisDezDays(daysArray, listHolidays, listFridays) {
     const ulDays = document.getElementById('days');
@@ -62,6 +63,7 @@ function createBtn(btnName) {
     return theBtn;
 }
 
+
 createLisDezDays(dezDaysList, holidaysList, fridaysList);
 
 document.querySelector('.buttons-container').appendChild(buttonHoliday);
@@ -88,4 +90,18 @@ buttonFriday.addEventListener('click', function changeColorFriday() {
             fridayDays[index].innerText = 'SEXTOU';
         }
     }
+})
+
+document.querySelectorAll('.day').forEach(function(element){
+    element.addEventListener('mouseover', function(element){
+        element.target.style.transform = 'scale(1.7)';
+        element.target.style.color = '#4e4141'
+    })
+})
+
+document.querySelectorAll('.day').forEach(function(element){
+    element.addEventListener('mouseout', function(element){
+        element.target.style.transform = 'scale(1)';
+        element.target.style.color = '#777';
+    })
 })
