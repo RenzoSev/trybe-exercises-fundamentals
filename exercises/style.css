@@ -88,11 +88,12 @@
     margin-left: 10px;
     vertical-align: middle;
     width: 35px;
+    transition: all 0.3s;
+    cursor: pointer;
   }
   
   .my-tasks div:hover {
-    height: 45px;
-    width: 45px;
+    transform: scale(1.3);
   }
   
   .my-tasks span {

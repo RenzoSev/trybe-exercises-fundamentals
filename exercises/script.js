@@ -20,7 +20,7 @@ const holidaysList = [24, 25, 31];
 const fridaysList = [4, 11, 15, 18];
 const buttonHoliday = createBtn('Feriado');
 const buttonFriday = createBtn('Friday');
-const cozinharTask = createTask('cozinhar');
+const cozinharTask = createTask('dormir');
 buttonHoliday.id = 'btn-holiday';
 buttonFriday.id = 'btn-friday';
 
@@ -61,56 +61,60 @@ function verifyFriday(day, fridays, listDay) {
 function createBtn(btnName) {
     const theBtn = document.createElement('button');
     theBtn.innerText = btnName;
+    document.querySelector('.buttons-container').appendChild(theBtn);
     return theBtn;
 }
 
-function createTask (taskName) {
-    let theTask = document.createElement('span');
+function createTask(taskName) {
+    const theTask = document.createElement('span');
     theTask.innerText = taskName;
-    return theTask;
+    document.querySelector('.my-tasks').appendChild(theTask);
 }
 
+function createTaskSubtitles(color) {
+    const theDiv = document.createElement('div');
+    theDiv.className = 'task';
+    theDiv.style.background = color;
+    document.querySelector('.my-tasks').appendChild(theDiv);
+}
 
 createLisDezDays(dezDaysList, holidaysList, fridaysList);
 
-document.querySelector('.buttons-container').appendChild(buttonHoliday);
-document.querySelector('.buttons-container').appendChild(buttonFriday);
+createTaskSubtitles('green');
 
 buttonHoliday.addEventListener('click', function changeColorHoliday() {
     const holidayDays = document.getElementsByClassName('holiday');
     for (let index of holidayDays) {
-        if (index.style.color === ''){
-            index.style.color = 'rgb(152,255,152)'
-            console.log(index)
-        } else {
-            index.style.color = '';
-        }
+        if (index.style.color === '') index.style.color = 'rgb(152,255,152)'
+         else index.style.color = '';  
     }
 })
 
-buttonFriday.addEventListener('click', function changeColorFriday() {
+buttonFriday.addEventListener('click', function changeTextFriday() {
     const fridayDays = document.getElementsByClassName('friday');
     for (let index = 0; index < fridayDays.length; index += 1) {
-        if (fridayDays[index].innerText === 'SEXTOU'){
-            fridayDays[index].innerText = fridaysList[index];
-        } else {
-            fridayDays[index].innerText = 'SEXTOU';
-        }
+        if (fridayDays[index].innerText === 'SEXTOU') fridayDays[index].innerText = fridaysList[index];
+         else fridayDays[index].innerText = 'SEXTOU';
     }
 })
 
-document.querySelectorAll('.day').forEach(function(element){
-    element.addEventListener('mouseover', function(element){
+document.querySelectorAll('.day').forEach(function (element) {
+    element.addEventListener('mouseover', function (element) {
         element.target.style.transform = 'scale(1.7)';
         element.target.style.color = '#4e4141'
     })
 })
 
-document.querySelectorAll('.day').forEach(function(element){
-    element.addEventListener('mouseout', function(element){
+document.querySelectorAll('.day').forEach(function (element) {
+    element.addEventListener('mouseout', function (element) {
         element.target.style.transform = 'scale(1)';
         element.target.style.color = '#777';
     })
 })
 
-document.querySelector('.my-tasks').appendChild(cozinharTask);
+document.querySelectorAll('.my-tasks div').forEach(function (element) {
+    element.addEventListener('click', function (element) {
+        if (element.target.className === 'task selected') element.target.className = 'task';
+         else element.target.className += ' selected';
+    })
+})
