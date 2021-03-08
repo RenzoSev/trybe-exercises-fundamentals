@@ -21,6 +21,7 @@ const fridaysList = [4, 11, 15, 18];
 const buttonHoliday = createBtn('Feriado');
 const buttonFriday = createBtn('Friday');
 const cozinharTask = createTask('dormir');
+const buttonTask = document.querySelector('#btn-add');
 buttonHoliday.id = 'btn-holiday';
 buttonFriday.id = 'btn-friday';
 
@@ -78,15 +79,24 @@ function createTaskSubtitles(color) {
     document.querySelector('.my-tasks').appendChild(theDiv);
 }
 
+function addTask () {
+    const inputTask = document.querySelector('#task-input');
+    const textTask = inputTask.value;
+    const listTask = document.createElement('li');
+    listTask.innerText = textTask;
+    document.querySelector('.task-list').appendChild(listTask);
+}
+
 createLisDezDays(dezDaysList, holidaysList, fridaysList);
 
 createTaskSubtitles('green');
+
 
 buttonHoliday.addEventListener('click', function changeColorHoliday() {
     const holidayDays = document.getElementsByClassName('holiday');
     for (let index of holidayDays) {
         if (index.style.color === '') index.style.color = 'rgb(152,255,152)'
-         else index.style.color = '';  
+        else index.style.color = '';
     }
 })
 
@@ -94,9 +104,15 @@ buttonFriday.addEventListener('click', function changeTextFriday() {
     const fridayDays = document.getElementsByClassName('friday');
     for (let index = 0; index < fridayDays.length; index += 1) {
         if (fridayDays[index].innerText === 'SEXTOU') fridayDays[index].innerText = fridaysList[index];
-         else fridayDays[index].innerText = 'SEXTOU';
+        else fridayDays[index].innerText = 'SEXTOU';
     }
 })
+
+buttonTask.addEventListener('click', addTask);
+
+window.addEventListener('keydown', function pressTask(element){
+    if (element.key === 'Enter') addTask()
+}) 
 
 document.querySelectorAll('.day').forEach(function (element) {
     element.addEventListener('mouseover', function (element) {
@@ -115,13 +131,13 @@ document.querySelectorAll('.day').forEach(function (element) {
 document.querySelectorAll('.my-tasks div').forEach(function (element) {
     element.addEventListener('click', function (element) {
         if (element.target.className === 'task selected') element.target.className = 'task';
-         else element.target.className += ' selected';
+        else element.target.className += ' selected';
     })
 })
 
-document.querySelectorAll('.day').forEach(function(element){
-    element.addEventListener('click', function(element){
-        if(element.target.style.background === '') element.target.style.background = document.querySelector('.selected').style.backgroundColor
-         else element.target.style.background = '';    
+document.querySelectorAll('.day').forEach(function (element) {
+    element.addEventListener('click', function (element) {
+        if (element.target.style.background === '') element.target.style.background = document.querySelector('.selected').style.backgroundColor
+        else element.target.style.background = '';
     })
 })
