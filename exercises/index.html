@@ -15,7 +15,10 @@
             <div id="div-font-style">
                 <p>Fonte:</p>
                 <select name="selected-style" id="selected-style">
-                    <option value="valor1" selected>Valor 1</option>
+                    <option value="sanSerif" selected>Sans Serif</option>
+                    <option value="arial">Arial</option>
+                    <option value="helvetica">Helvetica</option>
+                    <option value="georgia">Georgia</option>
                 </select>
             </div>
 
@@ -26,12 +29,12 @@
 
             <div>
                 <p>Cor</p>
-                <input type="color">
+                <input type="color" id="input-color-font">
             </div>
 
             <div>
                 <p>Espaçamento:</p>
-                <input type="number" name="input-number-style" id="input-number-style">
+                <input type="number" name="input-line-height" id="input-line-height">
             </div>
 
             <div>
@@ -39,12 +42,11 @@
                 <input type="color" id="input-color-background">
             </div>
         </div>
-
     </header>
 
     <section id="section-text">
         <div id="div-text">
-            <p>
+            <p id="paragraph-text">
                 O que é o Lorem Ipsum?
                 O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o
                 texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um
@@ -90,7 +92,7 @@
             </p>
         </div>
     </section>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
