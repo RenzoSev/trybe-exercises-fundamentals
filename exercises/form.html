@@ -7,6 +7,31 @@
     <title>Form</title>
 </head>
 <body>
-    
+    <fieldset>
+        <p>Nome:</p>
+        <input type="text" name="name" id="name" required maxlength="40">
+
+        <p>Email:</p>
+        <input type="email" name="email" id="email" required>
+
+        <p>CPF:</p>
+        <input type="number" name="cpf" id="cpf" maxlength="11" required>
+
+        <p>Endereço:</p>
+        <input type="text" name="address" id="address" maxlength="200" required>
+
+        <p>Cidade</p>
+        <input type="text" name="city" id="city" maxlength="28" required>
+
+        <p>Estado</p>
+        <select name="state" id="state">
+            <option value="" disabled selected hidden></option>
+        </select>
+
+        <p>Residência</p>
+        <label for="house"><input type="radio" name="home" id="house">Casa</label>
+        <label for="apartment"><input type="radio" name="home" id="apartment">Apartamento</label>
+    </fieldset>
+    <script src="script.js"></script>
 </body>
 </html>
