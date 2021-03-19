@@ -6,76 +6,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="/node_modules/bulma/css/bulma-rtl.min.css">
     <title>Forms</title>
 </head>
 
 <body class="">
-    <section>
-        <h1 class="">Forms</h1>
-    </section>
-
-    <form class="form" action="" id="form-resume" name="form">
-        <div id="container-fieldsets">
-            <fieldset class="field">
-                <div class="field">
-                    <input class="input" type="text" name="name" id="name" maxlength="40" placeholder="Nome completo">
-                </div>
-
-                <div class="field">
-                    <input class="input" type="email" name="email" id="email" placeholder="Email">
-                    <input class="input" type="text" name="cpf" id="cpf" maxlength="11" placeholder="CPF">
-                </div>
-
-                <div class="field">
-                    <input class="input" type="text" name="address" id="address" maxlength="200" placeholder="Endereço">
-                </div>
-
-                <div class="field">
-                    <input class="input" type="text" name="city" id="city" maxlength="28" placeholder="Cidade">
-
-                    <div class="control">
-                        <div class="select">
-                            <select name="state" id="state" value='Teste'>
-                                <option disabled selected hidden>Estado</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <input class="button" type="date" name="start-date" id="start-date">
-                </div>
-
-                <div class="control">
-                    <label class="radio" for="house"><input type="radio" name="home" id="house"
-                            value="Casa">Casa</label>
-                    <label class="radio" for="apartment"><input type="radio" name="home" id="apartment"
-                            value="Apartamento">Apartamento</label>
-                </div>
-
-            </fieldset>
-
-            <fieldset id="second-field" class="field">
-                <textarea class="textarea" name="office" id="office" cols="30" rows="2.5" maxlength="40"
-                    placeholder="Cargo"></textarea>
-                <textarea class="textarea" name="resume" id="resume" rows="5" maxlength="1000"
-                    placeholder="Currículo"></textarea>
-                <textarea class="textarea" name="office-description" id="office-description" rows="5" maxlength="500"
-                    placeholder="Descrição do cargo"></textarea>
-            </fieldset>
-
+    <div id="container-forms">
+        <form class="form" action="" id="form-resume" name="form">
             <section>
-                <button class="button" type="submit">Enviar</button>
-                <button class="button" type="reset">Resetar</button>
-                <button class="button" id="print">Printar</button>
+                <h1 id="title-forms">Forms</h1>
             </section>
-        </div>
-    </form>
+        
+                <fieldset class="field">
+                    <div class="field">
+                        <input class="input" type="text" name="name" id="name" maxlength="40"
+                            placeholder="Nome completo">
+                    </div>
+    
+                    <div class="field">
+                        <input class="input" type="email" name="email" id="email" placeholder="Email">
+                        <input class="input" type="text" name="cpf" id="cpf" maxlength="11" placeholder="CPF">
+                    </div>
+    
+                    <div class="field">
+                        <input class="input" type="text" name="address" id="address" maxlength="200"
+                            placeholder="Endereço">
+                    </div>
+    
+                    <div class="field">
+                        <input class="input" type="text" name="city" id="city" maxlength="28"
+                            placeholder="Cidade">
+    
+                        <div class="control">
+                            <div class="select">
+                                <select name="state" id="state" value='Teste'>
+                                    <option disabled selected hidden>Estado</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                        <input class="button" type="date" name="start-date" id="start-date">
+                    </div>
+    
+                    <div id="div-radio" class="control">
+                        <label class="radio" for="house"><input type="radio" name="home" id="house"
+                                value="Casa">Casa</label>
+                        <label class="radio" for="apartment"><input type="radio" name="home" id="apartment"
+                                value="Apartamento">Apartamento</label>
+                    </div>
+    
+                </fieldset>
+    
+                <fieldset id="second-field" class="field">
+                    <textarea class="textarea is-small" name="office" id="office" cols="30" rows="2.5" maxlength="40"
+                        placeholder="Cargo"></textarea>
+                    <textarea class="textarea is-small" name="resume" id="resume" rows="5" maxlength="1000"
+                        placeholder="Currículo"></textarea>
+                    <textarea class="textarea is-small" name="office-description" id="office-description" rows="5" maxlength="500"
+                        placeholder="Descrição do cargo"></textarea>
+                </fieldset>
+    
+                <section>
+                    <button class="button" type="submit">Enviar</button>
+                    <button class="button" type="reset">Resetar</button>
+                    <button class="button" id="print">Printar</button>
+                </section>
+        </form>
+    </div>
 
     <section id="section-resume-printed">
     </section>
