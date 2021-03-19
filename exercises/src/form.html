@@ -22,64 +22,59 @@
     </section>
 
     <form class="form" action="" id="form-resume" name="form">
-        <fieldset class="field">
-            <div class="field">
-                <input class="input is-small" type="text" name="name" id="name" maxlength="40" placeholder="Nome">
-                <input class="input is-small" type="text" name="last-name" id="last-name" maxlength="40"
-                    placeholder="Sobrenome">
-            </div>
-
-            <div class="field">
-                <input class="input" type="email" name="email" id="email" placeholder="Email">
-                <input class="input" type="text" name="cpf" id="cpf" maxlength="11" placeholder="CPF">
-            </div>
-
-            <div class="field">
-                <input class="input" type="text" name="address" id="address" maxlength="200" placeholder="Endereço">
-            </div>
-
-            <div class="field">
-                <input class="input" type="text" name="city" id="city" maxlength="28" placeholder="Cidade">
-
-                <div class="control">
-                    <div class="select">
-                        <select name="state" id="state" value='Teste'>
-                            <option disabled selected hidden>Estado</option>
-                        </select>
-                    </div>
+        <div id="container-fieldsets">
+            <fieldset class="field">
+                <div class="field">
+                    <input class="input" type="text" name="name" id="name" maxlength="40" placeholder="Nome completo">
                 </div>
 
-            </div>
+                <div class="field">
+                    <input class="input" type="email" name="email" id="email" placeholder="Email">
+                    <input class="input" type="text" name="cpf" id="cpf" maxlength="11" placeholder="CPF">
+                </div>
 
-            <div class="control">
-                <label class="radio" for="house"><input type="radio" name="home" id="house" value="Casa">Casa</label>
-                <label class="radio" for="apartment"><input type="radio" name="home" id="apartment"
-                        value="Apartamento">Apartamento</label>
-            </div>
+                <div class="field">
+                    <input class="input" type="text" name="address" id="address" maxlength="200" placeholder="Endereço">
+                </div>
 
-        </fieldset>
+                <div class="field">
+                    <input class="input" type="text" name="city" id="city" maxlength="28" placeholder="Cidade">
 
-        <fieldset>
-            <p>Currículo</p>
-            <textarea class="textarea" name="resume" id="resume" rows="5" maxlength="1000"></textarea>
+                    <div class="control">
+                        <div class="select">
+                            <select name="state" id="state" value='Teste'>
+                                <option disabled selected hidden>Estado</option>
+                            </select>
+                        </div>
+                    </div>
 
-            <p>Cargo</p>
-            <textarea class="textarea is-small" name="office" id="office" cols="30" rows="2.5"
-                maxlength="40"></textarea>
+                    <input class="button" type="date" name="start-date" id="start-date">
+                </div>
 
-            <p>Descrição do cargo</p>
-            <textarea class="textarea" name="office-description" id="office-description" rows="5"
-                maxlength="500"></textarea>
+                <div class="control">
+                    <label class="radio" for="house"><input type="radio" name="home" id="house"
+                            value="Casa">Casa</label>
+                    <label class="radio" for="apartment"><input type="radio" name="home" id="apartment"
+                            value="Apartamento">Apartamento</label>
+                </div>
 
-            <p>Data de início</p>
-            <input class="button" type="date" name="start-date" id="start-date">
-        </fieldset>
+            </fieldset>
 
-        <section>
-            <button class="button" type="submit">Enviar</button>
-            <button class="button" type="reset">Resetar</button>
-            <button class="button" id="print">Printar</button>
-        </section>
+            <fieldset id="second-field" class="field">
+                <textarea class="textarea" name="office" id="office" cols="30" rows="2.5" maxlength="40"
+                    placeholder="Cargo"></textarea>
+                <textarea class="textarea" name="resume" id="resume" rows="5" maxlength="1000"
+                    placeholder="Currículo"></textarea>
+                <textarea class="textarea" name="office-description" id="office-description" rows="5" maxlength="500"
+                    placeholder="Descrição do cargo"></textarea>
+            </fieldset>
+
+            <section>
+                <button class="button" type="submit">Enviar</button>
+                <button class="button" type="reset">Resetar</button>
+                <button class="button" id="print">Printar</button>
+            </section>
+        </div>
     </form>
 
     <section id="section-resume-printed">
