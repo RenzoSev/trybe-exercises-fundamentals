@@ -84,3 +84,27 @@ footer p {
   color: rgb(82, 82, 82);
   font-style: italic;
 }
+
+@media screen and (min-width: 768px ) {
+  html {
+    font-size: 22px;
+  }
+
+  .container-aside {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  aside {
+    flex-basis: 50%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+}
