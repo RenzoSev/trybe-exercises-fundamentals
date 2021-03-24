@@ -19,5 +19,8 @@ const lesson3 = {
 };
 
 const addKeys = (object, key, value) => object[key] = value;
-addKeys(lesson2, 'turno', 'manhã')
+
+const objectKeys = object => Object.keys(object);
+
+const objectLength = object => Object.keys(object).length;
 
