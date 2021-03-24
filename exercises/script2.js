@@ -28,3 +28,11 @@ const objectValue = object => Object.values(object);
 
 const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
 
+const showStudents = object => {
+    const studentsLesson = [];
+    const keys = Object.keys(object);
+    for (let index = 0; index < keys.length; index += 1) {
+        studentsLesson.push(object[keys[index]]['numeroEstudantes']);
+    }
+};
+
