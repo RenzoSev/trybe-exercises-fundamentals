@@ -37,3 +37,11 @@ const showStudents = object => {
 };
 
 const getValueByNumber = (object, number) => object[Object.keys(object)[number]];
+
+const verifyPair = (object, key, value) => {
+    const pairs = Object.entries(object);
+    for (let index in pairs) {
+        if (pairs[index][0] === key && pairs[index][1] === value) return true
+    }
+    return false
+};
