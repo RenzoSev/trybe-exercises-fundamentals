@@ -24,3 +24,5 @@ const objectKeys = object => Object.keys(object);
 
 const objectLength = object => Object.keys(object).length;
 
+const objectValue = object => Object.values(object);
+
