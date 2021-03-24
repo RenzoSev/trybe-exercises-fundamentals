@@ -34,8 +34,6 @@ const order = {
     },
 };
 
-console.log(order.address)
-
 const customerInfo = (order) => {
     const address = order.address;
     const helloName = order.order.delivery.deliveryPerson;
@@ -52,8 +50,22 @@ const customerInfo = (order) => {
 customerInfo(order);
 
 const orderModifier = (order) => {
-    // Adicione abaixo as informações necessárias.
+    const newTotal = 50;
+    const newDeliveryPerson = 'Beatriz'
+    
+    const assignObject = {
+        order : {
+            delivery : {
+                deliveryPerson : newDeliveryPerson
+            }
+        },
+        payment : {
+            total : newTotal
+        },
+    }
 
+    Object.assign(order, assignObject);
 }
 
 orderModifier(order);
+console.log(order);
