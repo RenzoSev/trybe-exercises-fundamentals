@@ -36,3 +36,4 @@ const showStudents = object => {
     }
 };
 
+const getValueByNumber = (object, number) => object[Object.keys(object)[number]];
