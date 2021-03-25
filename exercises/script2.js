@@ -29,11 +29,12 @@ const objectValue = object => Object.values(object);
 const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
 
 const showStudents = object => {
-    const studentsLesson = [];
+    let studentsLesson = 0;
     const keys = Object.keys(object);
     for (let index = 0; index < keys.length; index += 1) {
-        studentsLesson.push(object[keys[index]]['numeroEstudantes']);
+        studentsLesson += object[keys[index]]['numeroEstudantes']
     }
+    return studentsLesson
 };
 
 const getValueByNumber = (object, number) => object[Object.keys(object)[number]];
@@ -44,4 +45,17 @@ const verifyPair = (object, key, value) => {
         if (pairs[index][0] === key && pairs[index][1] === value) return true
     }
     return false
+};
+
+// BÔNUS
+
+const sumStudents = (object) => {
+    const keys = Object.keys(object);
+    let total = 0;
+    for (let index in keys) {
+        if (object[keys[index]]['materia'] === 'Matemática') {
+            total += object[keys[index]]['numeroEstudantes']
+        }
+    }
+    return total;
 };
