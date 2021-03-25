@@ -59,3 +59,21 @@ const sumStudents = (object) => {
     }
     return total;
 };
+
+const createReport = (object, teacher) => {
+    const keys = Object.keys(object);
+    const teacherInfo = {
+        professor: teacher,
+        aulas: [],
+        estudantes: 0,
+    };
+    
+    for (let index in keys) {
+        if(object[keys[index]]['professor'] === teacher) {
+            teacherInfo.aulas.push(object[keys[index]]['materia']);
+            teacherInfo.estudantes += object[keys[index]]['numeroEstudantes'];
+        }
+    }
+
+    return teacherInfo;
+};
