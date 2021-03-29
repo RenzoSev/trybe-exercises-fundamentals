@@ -12,4 +12,12 @@ const newEmployess = () => {
     return employess;
 };
 
-console.log(newEmployess());
+const checkNumbers = (gNum, rNum) => gNum === rNum ? true : false; 
+
+const draw = (gambleNum, action) => {
+    const randomNum = Math.ceil(Math.random() * (5 - 1) + 1);
+    const result = action(gambleNum, randomNum); 
+    
+    if (result) return 'Parabéns você ganhou';
+    else return 'Tente novamente';
+};
