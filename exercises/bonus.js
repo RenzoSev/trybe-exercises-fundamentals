@@ -53,9 +53,7 @@ const gameActions = {
     result: () => battleMembers
 };
 
-const runRound = (e, game) => {
-    e !== 'result' ? game[e]() : console.log(game[e]());
-}
+const runRound = (e, game) => e !== 'result' ? game[e]() : console.log(game[e]());
 
 const round = (game) => {
     const keysGame = Object.keys(game);
