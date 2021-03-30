@@ -1,4 +1,4 @@
-// const assert = require('assert');
+const assert = require('assert');
 
 const books = [{
         id: 1,
@@ -126,9 +126,7 @@ const expectedResult = [{
 
 const booksOrderedByReleaseYearDesc = obj => {
     obj.sort((a, b) => b.releaseYear - a.releaseYear);
+    return obj
 }
 
-booksOrderedByReleaseYearDesc(books);
-console.log(books);
-
-// assert.deepStrictEqual(booksOrderedByReleaseYearDesc(), expectedResult);
+assert.deepStrictEqual(booksOrderedByReleaseYearDesc(books), expectedResult);
