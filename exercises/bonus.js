@@ -24,7 +24,7 @@ const battleMembers = {
     dragon
 };
 
-const damage = (max, min) => Math.random() * (max - min) + min;
+const damage = (max, min) => Math.ceil(Math.random() * (max - min) + min);
 const actualMana = (mana) => mana > 15 ? mana - 15 : 'Mana insuficiente';
 
 const dragonDamage = (action) => action(dragon.strength, 15);
@@ -51,4 +51,11 @@ const gameActions = {
         dragon.damage = dragonDamage(damage);
     },
     result: () => battleMembers
+};
+
+const round = game => {
+    const keysGame = Object.keys(game);
+    keysGame.forEach(e => {
+        e !== 'result' ? game[e]() : console.log(game[e]())
+    })
 };
