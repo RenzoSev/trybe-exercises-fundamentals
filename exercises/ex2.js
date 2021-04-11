@@ -1,5 +1,7 @@
-const planetDistanceFromSun = ({ name, distanceFromSun: { value, measurementUnit },}) => 
-`${name} is ${value} ${measurementUnit} apart from the Sun`;
+const planetDistanceFromSun = ({
+  name,
+  distanceFromSun: { value, measurementUnit },
+}) => `${name} is ${value} ${measurementUnit} apart from the Sun`;
 
 const mars = {
   name: "Mars",
@@ -26,6 +28,6 @@ const jupiter = {
 };
 
 console.log(planetDistanceFromSun(mars)); // A
-console.log(planetDistanceFromSun(venus)); // B
-console.log(planetDistanceFromSun(jupiter)); // C
-// Ordem de console.log pela chamada
+setTimeout(() => console.log(planetDistanceFromSun(venus)), 3000); // C
+setTimeout(() => console.log(planetDistanceFromSun(jupiter)), 2000); // B
+// Ordem do console.log setada pelo setTimeout
