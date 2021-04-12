@@ -1,15 +1,20 @@
 const getArr = () => {
-  const arr = [];
-  for (let index = 0; index < 10; index += 1) {
-    arr.push(Math.round(Math.random() * 51) ** 2);
-  }
-  return arr;
+  return Array.from({ length: 10 }, () => Math.round(Math.random() * 51) ** 2);
 };
 
-const thePromise = new Promise((resolve, reject) => {
-  const arr = getArr();
-  const under8000 = arr.reduce((acc, cur) => acc + cur) < 8000;
-  under8000 ? resolve('Promise resolvida!') : reject('Promise rejeitada');
-})
-.then(msg => console.log(msg))
-.catch(err => console.log(err));
+const createPromise = () => {
+  return new Promise((resolve, reject) => {
+    const arr = getArr();
+    const sum = arr.reduce((acc, cur) => acc + cur);
+    sum < 8000 ? resolve(sum) : reject();
+  });
+};
+
+const getPromise = () => {
+  createPromise()
+    .then((sum) => [2, 3, 5, 10].map((num) => (sum / num).toFixed(2)))
+    .then((result) => console.log(result))
+    .catch(() => console.log("É mais de oito mil!"));
+};
+
+getPromise();
