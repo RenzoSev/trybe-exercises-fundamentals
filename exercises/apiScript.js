@@ -1,7 +1,8 @@
 // apiScript.js
 const API_URL = "https://icanhazdadjoke.com/";
 
-const getJoke = (joke) => document.querySelector("#jokeTitle").innerText = joke;
+const getJoke = (joke) =>
+  (document.querySelector("#jokeTitle").innerText = joke);
 
 const fetchJoke = () => {
   const myObject = {

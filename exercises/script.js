@@ -20,7 +20,7 @@ const getPromise = async () => {
     const result = getSum(sum);
     console.log(result);
   } catch (error) {
-    console.log('É mais de oito mil!!');
+    console.log("É mais de oito mil!!");
   }
 };
 
