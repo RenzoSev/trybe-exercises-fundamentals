@@ -47,9 +47,21 @@ const findAnimalByName = (nameA) => (
 
 const getAnimal = (nameA) => findAnimalByName(nameA).then(name => name);
 
-const findAnimalByAge
+const findAnimalByAge = (ageA) => (
+  new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const age = Animals.find(({ age }) => age === ageA);
+
+      if(age) return resolve(age);
+      
+      return reject('Nenhum animal com a idade.');
+    }, 100)
+  })
+);
+
+const getAnimalByAge = (ageA) => findAnimalByAge(ageA).then(age => age); 
 
 module.exports = {
-  getListAnimals,
+  getAnimalByAge,
   getAnimal
 };
