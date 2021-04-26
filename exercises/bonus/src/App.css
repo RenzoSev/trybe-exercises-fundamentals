@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 1em;
+}
+
+.row {
+  display: flex;
+  background-color: rgb(34, 34, 34);
+  justify-content: space-around;
+  flex-flow: row wrap;
+  padding: 2rem;
+}
+
+.col-sm-4 {
+  background-color: springgreen;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.3rem;
+  padding: 1.3rem;
+  border-radius: 8px;
+}
+
+.card {
+  text-align: center;
+  background-color: snow;
+  border-radius: 8px;
+  flex-basis: 50%;
+  padding: 1.3rem;
+}
