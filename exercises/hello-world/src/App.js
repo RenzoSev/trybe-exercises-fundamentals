@@ -12,8 +12,10 @@ const task = (value) => {
 function App() {
   return (
     <ul>
-      {compromissos
-      .map(compromisso => task(compromisso))}
+      {
+      compromissos
+      .map(compromisso => task(compromisso))
+      }
     </ul>
   );
 }
