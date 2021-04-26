@@ -8,7 +8,7 @@ You can know more about __Trybe__ [clicking here!](https://www.betrybe.com/)
 This repository is one of the four repositories about the __Trybe Modules__.
 </br>
 Basically __all Fundamentals Content__ is separated in these repository. The modules are:
-1. Fundamentos (Foundations)
+1. Fundamentos (Fundamentals)
 1. Front-End
 1. Back-End
 1. Ciências da computação (Computer Science)
